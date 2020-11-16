@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Главная страница</title>
+</head>
+<body>
+ 
+        <header class="header">
+            <div class="toggle">
+                <a href="{% url 'title_page' %}">Главная</a>
+                <a href="#"> О Нас</a>
+                <a href="#">Рубрики</a>
+                <a href="#">Ссылки</a>
+                <a href="#">Форум</a>
+            </div>
+            <a href="{% url 'login' %}">Вход</a>
+        </header>
+        <div class="block2">
+            <div class="container">
+                <h1 class="title"> Растем, учимся, <br>развиваемся!</h1>
+                <p>Пару строк о том зачем разработан этот портал и т.д.</p>
+                <button class="forum"> Перейти на форум </button>
+            </div>
+        </div>
+   
+
+
+    <div class="block3">
+       <h2 class="title" style="text-align: center; padding-top: 2vh;">О портале</h2>
+       <div class="container">
+           <div class="row">
+            <p class="text">
+                Противоположная точка зрения подразумевает, что диаграммы связей освещают 
+                чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, заблокированы
+                 в рамках своих собственных рациональных ограничений. С другой стороны, высококачественный прототип будущего проекта играет важную роль в формировании 
+                своевременного выполнения сверхзадачи. Мы вынуждены отталкиваться от того, 
+                что постоянный количественный рост и сфера нашей активности играет важную роль в формировании.
+               </p>
+               <div class="image" style="width:20vw;">
+                <img src="/static/img/women.png" style="width: 100%;">
+               </div>
+               
+           </div>
+      
+       </div>
+       <div class="block4">
+        <h3  class="title" style="text-align: center;">Рубрики</h3>
+        <div class="items">
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/briefcase.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Консультации для воспитателей
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/book.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Конспекты занятий <br>с детьми
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/books.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Сценарии <br>мероприятий <br>и праздников
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/tabs.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Методические разработки
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/clipboard.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Документация
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/closed-book.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Статьи
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/woman.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Проектная деятельность
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/thinking-face.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Мастер-классы
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/man.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Кружковая работа
+               </p>
+            </div>
+            <div class="item">
+                <div class="img">
+                    <img src="/static/img/Vector.png">
+                </div>
+               <p class='item_text' style="text-align: center;">
+                Программы
+               </p>
+            </div>
+        </div>
+        <button class="show">Все рубрики(17)</button>
+    </div>
+    </div>
+    <div class="block5">
+        <div class="block_container">
+            <h3 class="title">Форум</h3>
+            <div class="row">
+                <div class="text1"> 
+                    <p>
+                        Противоположная точка зрения подразумевает, что диаграммы связей освещают чрезвычайно 
+                        интересные особенности картины в целом, однако
+                         конкретные выводы, разумеется, заблокированы в рамках своих собственных рациональных ограничений.
+                    </p>
+                    <button class="forum">Перейти на форум</button>
+                </div>
+                <img src="/static/img/smile.png">
+
+            </div>            
+            <h3 class="title" style="align-self: flex-end;">Наши контакты</h3>
+            <div class="text1" style="align-self: flex-end;"> 
+                <p>
+                    9553 Railroad St undefined Lewisville, Minnesota 42281 United States
+                </p>
+                <p>
+                    8 (629) 555-01-29
+                </p>
+                <p>
+                    ralph.phillips@example.com
+                </p>
+            </div>
+        </div>
+    </div>
+<footer>
+   <a href="#" style="cursor: pointer; text-decoration: none; color:white;"> Наверх</a> 
+</footer>
+</body>
+
+</html>

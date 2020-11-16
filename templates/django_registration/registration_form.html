@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+  {% block content %}
+  <header class="header">
+    <div class="toggle">
+        <a href="{% url 'title_page' %}">Главная</a>
+        <a href="#"> О Нас</a>
+        <a href="#">Рубрики</a>
+        <a href="#">Ссылки</a>
+        <a href="#">Форум</a>
+    </div>
+    <a href="{% url 'login' %}">Вход</a>
+</header>
+<div class="wrapper">
+
+  <h2>Регистрация</h2>
+  <form method="post" class="registration_form">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+     
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% if field.help_text %}
+      <small style="display: none">{{ field.help_text }}</small>
+    {% endif %}
+      {% endfor %}
+      <div class="buttons" style="display: flex; justify-content: space-between; align-items: center;"><button type="submit">Зарегистрироваться</button>
+      <a href="{% url 'login' %}" class="href">Уже есть аккаунт?</a>
+      </div>
+    
+  </form>
+{% endblock %}
+</div>
+
+</body>
+</html>
